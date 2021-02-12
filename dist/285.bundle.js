@@ -1,0 +1,1 @@
+(self.webpackChunkjs_2_hw_6=self.webpackChunkjs_2_hw_6||[]).push([[285],{285:(e,s,t)=>{"use strict";t.r(s),t.d(s,{default:()=>n});const n=Vue.component("search",{props:["flag","text"],template:'\n        <div v-if="flag" class="error">\n            {{this.errorText}}\n            {{text}}\n        </div>\n    '})}}]);

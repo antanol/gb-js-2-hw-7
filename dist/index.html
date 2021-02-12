@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ДЗ 6</title>
+    
+    <!-- Стили подключаем через лоадеры вебпака -->
+    <!-- <link rel="stylesheet" href="style/main.css"> -->
+    <!-- Подключение font-awesome -->
+    <script src="https://use.fontawesome.com/3a05ab18ac.js"></script>
+    <!-- версия Vue для разработки, отображает полезные предупреждения в консоли -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div class="tasks">
+        <div class="texttasks">
+            <h3>Задания:</h3>
+            <ol>
+                <li>Привязать добавление товара в корзину к реальному API.</li>
+                <li>Добавить API для удаления товара из корзины.</li>
+                <li>Добавить файл stats.json, в котором будет храниться статистика действий пользователя с корзиной. В файле должны быть поля с названием действия (добавлено/удалено), названием товара, с которым производилось действие и временем, когда оно было совершено.</li>
+            </ol>
+        </div>
+        <div class="answers" id="app">
+            <h3>Результат</h3>
+            <header>
+                <h1>Logo</h1>
+                
+                <search></search>
+
+                <basket :content="basketContent.content"></basket>
+            </header>
+
+            <error flag="errorExist" :text="errorText"></error>
+            <catalog-page :products="products"></catalog-page>
+        </div>
+    </div>
+
+    <script src="bundle.js"></script>
+</body>
+</html>
