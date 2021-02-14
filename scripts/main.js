@@ -1,7 +1,6 @@
 // чтобы sass-loader корректно работал, указываем путь до файла scss
 import '../style/main.scss';
 
-
 const app = new Vue({
     el: '#app',
     components: {
