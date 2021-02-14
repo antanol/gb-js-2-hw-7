@@ -2,12 +2,20 @@ Vue.component('product-short', {
     props: ['item'], 
     template: `
         <div class="basket-item">
-            <i class="fa fa-times" aria-hidden="true" title="удалить из корзины"></i>
+            <i class="fa fa-times" aria-hidden="true" title="удалить из корзины" data-id="item.product_id" @click="deleteItem($event)"></i>
             <img src="http://placehold.it/50x50">
             <b>{{item.product_name}}</b>
             <div class="price">{{item.quantity}} шт. на {{item.price*item.quantity}} рублей</div>
         </div>
-        `
+        `,
+    methods: {
+        deleteItem(evt){
+            let deleteThis = evt.target.dataset.id;
+            let deleteIndex = this.$root.basketContent.content.findIndex(item => item.id_product == deleteThis);
+            this.$root.basketContent.content.splice(deleteIndex, 1);
+            this.$root.checkAmount();
+        }
+    }
 });
 
 export default Vue.component('basket', {

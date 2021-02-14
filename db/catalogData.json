@@ -8,5 +8,40 @@
     "id_product": 456,
     "product_name": "Мышка",
     "price": 1000
+  },
+  { 
+    "id_product": 124,
+    "product_name": "Мышка",
+    "price": 100
+  },
+  { 
+    "id_product": 415,
+    "product_name": "Клавиатура",
+    "price": 200
+  },
+  { 
+    "id_product": 1,
+    "product_name": "Колонки",
+    "price": 130
+  },
+  { 
+    "id_product": 11,
+    "product_name": "Наушники",
+    "price": 150
+  },
+  { 
+    "id_product": 77,
+    "product_name": "Ноутбук",
+    "price": 400
+  },
+  { 
+    "id_product": 141,
+    "product_name": "Коврик",
+    "price": 150
+  },
+  { 
+    "id_product": 101,
+    "product_name": "Кресло",
+    "price": 160
   }
 ]

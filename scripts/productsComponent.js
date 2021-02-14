@@ -36,7 +36,7 @@ Vue.component('product-item', {
                 alreadyExist.quantity += newNum;
                 this.$root.basketContent.content.countGoods += newNum;
             }else{
-                let newElem = this.products.find(item => item.id_product == eventID);
+                let newElem = this.$root.products.find(item => item.id_product == eventID);
                 newElem.quantity = newNum;
                 this.$root.basketContent.content.push(newElem);
             };
