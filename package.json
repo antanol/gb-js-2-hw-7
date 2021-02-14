@@ -23,6 +23,8 @@
     "webpack-cli": "^4.4.0"
   },
   "dependencies": {
+    "express": "^4.17.1",
+    "node-static": "^0.7.11",
     "vue": "^2.6.12"
   }
 }

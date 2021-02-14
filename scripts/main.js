@@ -11,13 +11,14 @@ const app = new Vue({
         'error': () => import('./errorComponent.js')
     },
     data: {
-        linkData: {
-            catalogData: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/catalogData.json",
-            getBasket: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/getBasket.json"
+        localLinkData: {
+            catalogData: "../db/catalogData.json",
+            getBasket: "../db/getBasket.json"
         },
-        filtered: [],
-        showBasket: false,
         products: [],
+        filtered: [],
+        
+        showBasket: false,
         basketContent: {
             amount: 0,
             countGoods: 0,
@@ -39,7 +40,7 @@ const app = new Vue({
     mounted(){
         // аналог window.onload
 
-        fetch(this.linkData.catalogData)
+        fetch(this.localLinkData.catalogData)
             .then(result => {
                 result.json()
                 .then(data => {
@@ -51,7 +52,7 @@ const app = new Vue({
                 this.errorText = `Что-то пошло не так... Простите, но мы не смогли найти товары. Пожалуйста, зайдите позже!`
             });
 
-        fetch(this.linkData.getBasket)
+        fetch(this.localLinkData.getBasket)
             .then(result => {
                 result.json()
                 .then(data => {
@@ -61,7 +62,7 @@ const app = new Vue({
                 })
             })
             .catch(err=>{
-                // если файл не найден, берём пустую корзину
+                // если файл не найден, генерируем пустую корзину
                 this.basketContent.content = [];
                 this.basketContent.amount = 0;
                 this.basketContent.countGoods = 0;

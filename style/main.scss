@@ -102,8 +102,7 @@ body{
 
             .basket-item{
                 border-bottom: 1px solid black;
-                // line-height: normal;
-                // padding: 1px;
+                position: relative;
                 
                 display: grid;
                 grid-template-columns: 20% 80%;
@@ -114,6 +113,14 @@ body{
                     grid-row-start: 1;
                     grid-row-end: 3;
                     margin: auto;
+                }
+
+                .fa-times{
+                    position: absolute;
+                    top: 5px;
+                    right: 5px;
+
+                    color: red;
                 }
 
                 &::after{
