@@ -17,12 +17,12 @@
   { 
     "id_product": 415,
     "product_name": "Клавиатура",
-    "price": 200
+    "price": 2000
   },
   { 
     "id_product": 1,
     "product_name": "Колонки",
-    "price": 130
+    "price": 1300
   },
   { 
     "id_product": 11,
@@ -32,7 +32,7 @@
   { 
     "id_product": 77,
     "product_name": "Ноутбук",
-    "price": 400
+    "price": 80000
   },
   { 
     "id_product": 141,
@@ -42,6 +42,6 @@
   { 
     "id_product": 101,
     "product_name": "Кресло",
-    "price": 160
+    "price": 16000
   }
 ]

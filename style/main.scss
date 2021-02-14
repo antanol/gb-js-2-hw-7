@@ -8,41 +8,10 @@ body{
     font-family: sans-serif;
 }
 
-.tasks{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-
-    .texttasks,
-    .answers{
-        @extend %main_subtask;
-
-        h3{
-            border-bottom: 1px solid black;
-        }
-    }
-
-    li{
-        margin-bottom: 10px;
-    }
-
-    details{
-        font-style: italic;
-    }
-
-    summary{
-        font-style: normal;
-        color: rgb(69, 141, 170);
-    }
-
-    .answers{
-        grid-column-start: 2;
-        grid-row-start: 1;
-        grid-row-end: 3;
-    }
-    
-    .hidden-screen{
-        display: none !important;
-    }
+#app{
+    max-width: 1200px;
+    margin: auto;
+}
 
     header{
         background-color: darkred;
@@ -50,7 +19,7 @@ body{
 
         text-align: left;
 
-        line-height: 40px;
+        line-height: 0;
         padding: 5px;
         font-size: 18px;
         margin-bottom: 30px;
@@ -101,8 +70,10 @@ body{
             right: 5px;
 
             .basket-item{
-                border-bottom: 1px solid black;
                 position: relative;
+                border-bottom: 1px solid black;
+                line-height: normal;
+                padding: 5px;
                 
                 display: grid;
                 grid-template-columns: 20% 80%;
@@ -170,102 +141,15 @@ body{
         }
     }
 
-    .fa-plus-circle{
-        font-size: 20px;
-        color: green;
+.fa-plus-circle{
+    font-size: 20px;
+    color: green;
 
-        &:hover{
-            color:lightgreen;
-            font-size: 22px;
-        }
+    &:hover{
+        color:lightgreen;
+        font-size: 22px;
     }
-}
-
-.hamburger-constructor {
-    width: 600px;
-    margin-top: 20px;
-    padding: 0 40px;
-    box-shadow: 5px 5px 5px lightgrey;
-
-    position: relative;
-
-    // color: gray;
-
-    .fa{
-        position: absolute;
-        top: calc((100% - 20px) /2);
-
-        font-size: 40px;
-        color: gray;
-
-        &.fa-angle-right{
-            right: 15px;
-        }
-        
-        &.fa-angle-left{
-            left: 15px;
-        }
-
-        &.hidden-arrow{
-            display: none;
-        }
-
-        &:hover{
-            color: yellowgreen;
-        }
-    }
-
-    h2{
-        margin: 5px;
-        font-weight: 400;
-    }
-
-    hr{
-        margin: 10px 0 0 0;
-    }
-}
-
-section{
-    hr{
-        margin: 0 0 10px 0;
-    }
-
-    label{
-        display: inline-block;
-
-        min-width: 160px;
-        margin: 10px;
-        padding: 20px;
-        
-        border: 2px solid gray;
-        border-radius: 10px;
-
-        text-align: center;
-
-        &:hover{
-            border-color: yellowgreen;
-        }
-
-        input{
-            display: none;
-        }
-
-        img{
-            height: 100px;
-        }
-
-        .params{
-            font-style: italic;
-            color: gray;
-            font-size: 70%;
-        }
-
-        .price{
-            // font-size: 130%;
-            font-weight: bold;
-        }
-    }
-}
+}   
 
 .task-hidden{
     display: none;
